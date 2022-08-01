@@ -50,7 +50,7 @@ export class UserFormComponent implements OnInit {
         `O Usuário foi cadastrado!`,
         'success'
       )
-      this.userService.setUserIndex(this.userService.getUserIndex() + 1)
+      this.userService.setUserIndex(Number(this.userService.getUserIndex()) + 1)
     }, (err) => {
       Swal.fire(
         'Erro!',
