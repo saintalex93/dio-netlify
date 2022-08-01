@@ -43,7 +43,7 @@ export class UserFormComponent implements OnInit {
   }
 
   createUser() {
-    this.userForm.get('id')?.patchValue(this.userService.getUserIndex() + 1)
+    this.userForm.get('id')?.patchValue(Number(this.userService.getUserIndex()) + 1)
     this.userService.createUser(this.userForm.value).subscribe(result => {
       Swal.fire(
         'Sucesso!',
